@@ -16,6 +16,23 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.19.1</version>
         </plugin>
+      <plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.2.1.Final</version>
+				<executions>
+					<execution>
+						<phase/>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<hostname>${appDplySrvr.host}</hostname>
+					<port>${appDplySrvr.port}</port>
+				</configuration>
+			</plugin>
   </plugins>
   </build>
 </project>
