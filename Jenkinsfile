@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat 'echo "Deploying"'
+        bat 'mvn wildfly:redeploy -DappDplySrvr.host=127.0.0.1-DappDplySrvr.port=9990'
       }
     }
     stage('Result') {
